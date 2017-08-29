@@ -1,0 +1,29 @@
+{
+  "name": "rxjs2",
+  "version": "1.0.0",
+  "description": "More refined specific RXJS playground",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --watch --inline",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumudug/RxJS2.git"
+  },
+  "author": "Kumudu Gunasekara",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/kumudug/RxJS2/issues"
+  },
+  "homepage": "https://github.com/kumudug/RxJS2#readme",
+  "devDependencies": {
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "rxjs": "^5.4.3"
+  }
+}
