@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/kumudug/RxJS2#readme",
   "devDependencies": {
+    "expose-loader": "^0.7.3",
     "ts-loader": "^2.3.4",
     "typescript": "^2.4.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "rxjs": "^5.4.3"
   }
 }

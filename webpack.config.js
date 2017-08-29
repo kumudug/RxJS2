@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
@@ -14,14 +15,27 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /.ts$/,
                 loader: "ts-loader"
+            },
+            {
+                test: /jquery/,
+                use: [{
+                    loader: 'expose-loader',
+                    options: '$'
+                }]
             }
         ]
     },
     resolve: {
         extensions: ['*', '.ts', '.js']
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            'window.jQuery': 'jquery',
+            jQuery: 'jquery'
+        })
+    ]
 }
