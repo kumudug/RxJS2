@@ -25,6 +25,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "@types/jquery": "^3.2.12",
+    "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "rxjs": "^5.4.3"
   }
