@@ -31,6 +31,33 @@ module.exports = {
                     loader: 'expose-loader',
                     options: 'jQuery'
                 }]
+            },
+            {
+                test: /\.less$/,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "less-loader" // compiles Less to CSS
+                }]
+            },
+            {
+                test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: 'fonts/[name].[hash].[ext]',
+                    publicPath: '/js/'
+                }
+            },
+            {
+                test: /\.(png|svg|jpe?g|gif|ico)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[hash].[ext]',
+                    publicPath: '/js/'
+                }
             }
         ]
     },
