@@ -1,10 +1,14 @@
 const path = require('path');
 var webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
     entry: {
-        'app': './main',
+        'app01': './src/01_ObserverFromSequenceOfNumbers',
+        'app02': './src/02_ObserverFromEvent_MouseMove',
+        'app03': './src/03_ObserverFromXHR',
+        'app04': './src/04_ObservableFromFetch',
         'vendor': './vendor'
     },
     devServer: {
@@ -72,6 +76,10 @@ module.exports = {
             'window.jQuery': 'jquery',
             jQuery: 'jquery',
             $: 'jquery'            
-        })
+        }),
+        new CopyWebpackPlugin([
+            // Copy directory contents to {output}/to/directory/
+            { from: 'data', to: 'js' }
+        ]),
     ]
 }
